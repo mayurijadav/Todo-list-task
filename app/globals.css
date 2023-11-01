@@ -1,42 +1,50 @@
-* {
-  background-color: aqua;
+*{
+  background-color:rgb(127, 255, 227);
 }
 
-.input-container {
-  color: red;
-  width: 100px;
-  border: 2px solid black; /* Specify a border style (e.g., solid) and color */
-  margin: auto; /* Correct the capitalization of "auto" */
-  font-weight: bold; /* Use "font-weight" to set the font weight */
+.main-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-.button {
-  background-color: yellow;
+.center-container{
+  border:2px solid black;
+  height: 500px;
+  width: 500px;
 }
-.label {
-  color: red;
-  display: inline;
-  margin-right: 10px;
+hr{
+  border: 2px solid black;
 }
-.input {
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 5px;
-  flex: 1;
+
+
+.input-box-todo{
+  margin-left: 10px;
+  width: 90%;
+  height: 40px;
+  border-radius: 14px;
+  border:1px solid black;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+  outline: none;
+  font-size: large;
 }
-.reset{
-appearance: auto;
-user-select: none;
-white-space: pre;
-align-items: flex-start;
-text-align: center;
-cursor: default;
-box-sizing: border-box;
-background-color: buttonface;
-color: buttontext;
-padding: 1px 6px;
-border-width: 2px;
-border-style: outset;
-border-color: buttonborder;
-border-image: initial;
+.add-btn{
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  border:2px solid black;
+  background-color:#316fc1;
+  color: rgb(255, 255, 255);
+  margin-left: 225px;
+  
+}
+
+.list-item{
+  list-style-type: none;
+  border:2px solid black;
+  color:black;
+  width: 100%;
+  height: 30px;
+
 }
 
