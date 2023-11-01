@@ -1,0 +1,42 @@
+* {
+  background-color: aqua;
+}
+
+.input-container {
+  color: red;
+  width: 100px;
+  border: 2px solid black; /* Specify a border style (e.g., solid) and color */
+  margin: auto; /* Correct the capitalization of "auto" */
+  font-weight: bold; /* Use "font-weight" to set the font weight */
+}
+.button {
+  background-color: yellow;
+}
+.label {
+  color: red;
+  display: inline;
+  margin-right: 10px;
+}
+.input {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 5px;
+  flex: 1;
+}
+.reset{
+appearance: auto;
+user-select: none;
+white-space: pre;
+align-items: flex-start;
+text-align: center;
+cursor: default;
+box-sizing: border-box;
+background-color: buttonface;
+color: buttontext;
+padding: 1px 6px;
+border-width: 2px;
+border-style: outset;
+border-color: buttonborder;
+border-image: initial;
+}
+
