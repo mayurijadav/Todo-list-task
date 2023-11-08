@@ -1,29 +1,35 @@
 "use client"
-import Image from 'next/image'
-import TodoInputt from './TodoInput';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import TodoInput from './TodoInput';
 import Todolist from './Todolist';
 
-function Home() {
-  const [listTodo,setListTodo]=useState([]);
-  let addList = (inputText,inputPriority,inputestimate)=>{
-    if(inputPriority,inputText!=='')
-      setListTodo([...listTodo,inputText,inputPriority,inputestimate]);
-  }
-  
+const Page = () => {
+  const [main, setMain] = useState([]);
+
+  const addTask = (task) => {
+    setMain([...main, task]);
+  };
+
+  const deleteTask = (i) => {
+    let copyTask = [...main];
+    copyTask.splice(i, 1);
+    setMain(copyTask);
+  };
+
   return (
-    <div className="main-container">
-      <div className="center-container">
-        <TodoInputt addList={addList}/>
-        <h1 className="app-heading">TODO LIST</h1>
-        <hr/>
-        {listTodo.map((listItem,i)=>{
-          return (
-            <Todolist key={i} index={i} item={listItem} />
-          )
-        })}
+    <>
+      <h1 className="header">pooja, todolist</h1>
+      <TodoInput addTask={addTask} />
+      <hr />
+      <div className="render">
+        <ul className="render1">
+          <Todolist tasks={main} deleteTask={deleteTask} />
+        </ul>
       </div>
-    </div>
-  )
-}
-export default Home;
+    </>
+  );
+};
+
+export default Page;
+
+

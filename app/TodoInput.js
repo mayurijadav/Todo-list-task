@@ -1,62 +1,43 @@
-import React,{useState} from "react";
+import React, { useState } from 'react';
 
-function TodoInput(props) {
-    const [inputText,setInputText] = useState('');
-    const [inputPriority, setInputPriority] = useState('');
-    const [inputestimate, setInputestimate ] = useState('');
+const TodoInput = ({ addTask }) => {
+  const [title, setTitle] = useState('');
+  const [priority, setPriority] = useState('');
+  const [estimate, setEstimate] = useState('');
 
+  const submitHandler = (e) => {
+    e.preventDefault();
+    addTask({ title, priority, estimate });
+    setTitle('');
+    setPriority('');
+    setEstimate('');
+  };
 
-    const handleEnterPress = (e)=>{
-        if(e.target===13){
-            props.addList(inputText,inputPriority,inputestimate)
-            setInputText("")
-            setInputPriority("")
-            setInputestimate("")
-        }
-    }
   return (
-    <div className="input-container">
-      <input
-        type="text"
-        className="input-box-todo"
-        placeholder="Enter your task"
-        value={inputText}
-        onChange={e=>{
-            setInputText(e.target.value)
-        }}
-        onKeyDown={handleEnterPress}
-      />
-
-      <input
-        type="text"
-        className="input-box-todo"
-        placeholder="Enter your priority"
-        value={inputPriority}
-        onChange={e=>{
-            setInputPriority(e.target.value)
-        }}
-        onKeyDown={handleEnterPress}
-      />
-
-      <input
-        type="text"
-        className="input-box-todo"
-        placeholder="Enter your estimate time"
-        value={inputestimate}
-        onChange={e=>{
-            setInputestimate(e.target.value)
-        }}
-        onKeyDown={handleEnterPress}
-      />
-        
-      <button className="add-btn" 
-      onClick={()=>{
-        props.addList(inputText,inputPriority,inputestimate)
-        setInputText("")
-        setInputPriority("")
-        setInputestimate("")
-      }}>+</button>      
+    <div>
+      <form onSubmit={submitHandler}>
+        <input
+          type="text"
+          placeholder="Enter your title here"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Enter your priority"
+          value={priority}
+          onChange={(e) => setPriority(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Enter your estimate time"
+          value={estimate}
+          onChange={(e) => setEstimate(e.target.value)}
+        />
+        <button className="button">Add Task</button>
+      </form>
     </div>
   );
-}
+};
+
 export default TodoInput;
