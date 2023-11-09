@@ -1,5 +1,5 @@
 *{
-  background-color:rgb(127, 255, 227);
+  background-color:wheat;
 }
 
 .header {
@@ -18,32 +18,42 @@ button {
   padding: 5px 10px;
   cursor: pointer;
 }
-/* TodoInput.css */
 
-/* Style for the form */
 form {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
+
 }
 
-/* Style for input fields */
 input {
   margin-right: 10px;
   padding: 5px;
-  border: 1px solid #ccc;
+  border: 2px solid black;
   border-radius: 4px;
 }
 
-/* Style for the "Add Task" button */
 .button {
   background-color: #0073e6;
   color: white;
   padding: 8px 16px;
-  border: none;
   border-radius: 4px;
-  cursor: pointer;
 }
+table {
+  width: 50%;
+  border:2px solid black;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+button.delete {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  }
+
 
 

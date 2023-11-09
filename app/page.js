@@ -18,7 +18,7 @@ const Page = () => {
 
   return (
     <>
-      <h1 className="header">pooja, todolist</h1>
+      <h1 className="header">todolist</h1>
       <TodoInput addTask={addTask} />
       <hr />
       <div className="render">
