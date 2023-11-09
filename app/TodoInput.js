@@ -23,13 +23,13 @@ const TodoInput = ({ addTask }) => {
           onChange={(e) => setTitle(e.target.value)}
         />
         <input
-          type="text"
-          placeholder="Enter your priority"
+          type="number" placeholder="Enter your priority" list="quantities" min="12" step="12"                                                
           value={priority}
           onChange={(e) => setPriority(e.target.value)}
         />
+      
         <input
-          type="text"
+          type="time"
           placeholder="Enter your estimate time"
           value={estimate}
           onChange={(e) => setEstimate(e.target.value)}
