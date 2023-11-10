@@ -24,7 +24,12 @@ const TodoInput = ({ addTask }) => {
         />
         
         <input
+<<<<<<< HEAD
+          type="number"
+          placeholder="Enter your priority"
+=======
           type="number" placeholder="Enter your priority" list="quantities" min="12" step="12"                                                
+>>>>>>> 15a7149bcfe2286ea870c23504ea6dc06ee1beb3
           value={priority}
           onChange={(e) => setPriority(e.target.value)}
         />

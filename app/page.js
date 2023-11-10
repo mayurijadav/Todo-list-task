@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import TodoInput from './TodoInput';
+import TodoInput from './TodoInput.js';
 import Todolist from './Todolist';
 
 const Page = () => {
